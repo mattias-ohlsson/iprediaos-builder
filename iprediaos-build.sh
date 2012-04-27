@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Update
+yum update -y
+
 # We need this (uglu method)
 yum install -y git
 
