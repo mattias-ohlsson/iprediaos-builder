@@ -23,3 +23,12 @@ cd iprediaos-builder
 
 # Pull updates
 git pull
+
+# Go to git folder (clone new repo)
+cd /root/git/
+
+# Clone repo (gaaa... repo exist?)
+git clone https://github.com/mattias-ohlsson/iprediaos.git
+
+# Pull updates
+git pull
