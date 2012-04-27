@@ -4,7 +4,7 @@
 yum update -y
 
 # We need this (uglu method)
-yum install -y git
+yum install -y git livecd-tools spin-kickstarts l10n-kickstarts
 
 # Go home :)
 cd /root
@@ -28,7 +28,10 @@ git pull
 cd /root/git/
 
 # Clone repo (gaaa... repo exist?)
-git clone https://github.com/mattias-ohlsson/iprediaos.git
+git clone -b experimental https://github.com/mattias-ohlsson/iprediaos.git
 
 # Pull updates
 git pull
+
+# make iso
+make livecd-lxde-i686-sv_SE
