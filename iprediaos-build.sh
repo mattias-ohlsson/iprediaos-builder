@@ -45,3 +45,6 @@ mv *.iso /root/iprediaos/iso/
 
 # Delete old isos
 find /root/iprediaos/iso/ -type f -mtime +7 -exec rm {} \;
+
+# Sync files
+/root/iprediaos/sync-files.sh
