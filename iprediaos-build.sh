@@ -30,6 +30,9 @@ cd /root/git/
 # Clone repo (gaaa... repo exist?)
 git clone -b experimental https://github.com/mattias-ohlsson/iprediaos.git
 
+# Go to repo
+cd iprediaos
+
 # Pull updates
 git pull
 
