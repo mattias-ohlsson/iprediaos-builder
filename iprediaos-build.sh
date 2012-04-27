@@ -4,7 +4,6 @@
 yum install -y git
 
 # Go home :)
-
 cd /root
 
 # Create the git folder
