@@ -50,4 +50,4 @@ find /root/iprediaos/iso/ -type f -mtime +7 -exec rm {} \;
 /root/iprediaos/sync-files.sh
 
 # Reboot to fix loopback device problems
-reboot
+reboot &
