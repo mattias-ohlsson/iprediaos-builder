@@ -4,7 +4,7 @@
 yum update -y
 
 # We need this (uglu method)
-yum install -y git livecd-tools spin-kickstarts l10n-kickstarts
+yum install -y git livecd-tools spin-kickstarts l10n-kickstarts make
 
 # Go home :)
 cd /root
