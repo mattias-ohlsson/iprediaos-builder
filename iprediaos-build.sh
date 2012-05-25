@@ -38,11 +38,11 @@ git pull
 
 # make iso
 make livecd-lxde-i686-sv_SE
-make livecd-desktop-i686
+make livecd-desktop-i686-sv_SE
 
 # Rename and move iso
 mv IprediaOS-*-i686-Live-LXDE-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-LXDE-sv_SE.iso
-mv IprediaOS-*-i686-Live-Desktop.iso IprediaOS-$(date +%Y%m%d)-i686-Live-Desktop.iso
+mv IprediaOS-*-i686-Live-Desktop-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-Desktop-sv_SE.iso
 mkdir -p /root/iprediaos/iso/
 mv *.iso /root/iprediaos/iso/
 
