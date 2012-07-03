@@ -37,20 +37,27 @@ cd iprediaos
 git pull
 
 # make iso
+echo "livecd-creator ..."
 make livecd-lxde-i686-sv_SE
 make livecd-desktop-i686-sv_SE
+echo "livecd-creator done"
 
 # Rename and move iso
+echo "rename iso ..."
 mv IprediaOS-*-i686-Live-LXDE-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-LXDE-sv_SE.iso
 mv IprediaOS-*-i686-Live-Desktop-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-Desktop-sv_SE.iso
 mkdir -p /root/iprediaos/iso/
 mv *.iso /root/iprediaos/iso/
+echo "rename iso done"
 
 # Delete old isos
 find /root/iprediaos/iso/ -type f -mtime +3 -exec rm {} \;
 
 # Sync files
+echo "sync files ..."
 /root/iprediaos/sync-files.sh
+echo "sync files done"
 
 # Reboot to fix loopback device problems
+echo "reboot ..."
 reboot &
