@@ -38,6 +38,8 @@ git pull
 
 # make iso
 echo "livecd-creator ..."
+make livecd-lxde-i686
+make livecd-desktop-i686
 make livecd-lxde-i686-sv_SE
 make livecd-desktop-i686-sv_SE
 echo "livecd-creator done"
