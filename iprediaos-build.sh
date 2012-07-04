@@ -36,18 +36,23 @@ cd iprediaos
 # Pull updates
 git pull
 
-# make iso
+# make iso and rename
 echo "livecd-creator ..."
-make livecd-lxde-i686
+
 make livecd-desktop-i686
-make livecd-lxde-i686-sv_SE
+mv IprediaOS-*-i686-Live-Desktop.iso IprediaOS-$(date +%Y%m%d)-i686-Live-Desktop.iso
+
+make livecd-lxde-i686
+mv IprediaOS-*-i686-Live-LXDE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-LXDE.iso
+
 make livecd-desktop-i686-sv_SE
+mv IprediaOS-*-i686-Live-Desktop-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-Desktop-sv_SE.iso
+
+make livecd-lxde-i686-sv_SE
+mv IprediaOS-*-i686-Live-LXDE-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-LXDE-sv_SE.iso
+
 echo "livecd-creator done"
 
-# Rename and move iso
-echo "rename iso ..."
-mv IprediaOS-*-i686-Live-LXDE-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-LXDE-sv_SE.iso
-mv IprediaOS-*-i686-Live-Desktop-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-Desktop-sv_SE.iso
 mkdir -p /root/iprediaos/iso/
 mv *.iso /root/iprediaos/iso/
 echo "rename iso done"
