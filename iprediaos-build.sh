@@ -60,6 +60,6 @@ echo "sync files ..."
 /root/iprediaos/sync-files.sh
 echo "sync files done"
 
-# Reboot to fix loopback device problems
-echo "reboot ..."
-reboot &
+# (disabled) Reboot to fix loopback device problems
+# echo "reboot ..."
+# reboot &
