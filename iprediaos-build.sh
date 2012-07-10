@@ -53,9 +53,9 @@ mv IprediaOS-*-i686-Live-LXDE-sv_SE.iso IprediaOS-$(date +%Y%m%d)-i686-Live-LXDE
 
 echo "livecd-creator done"
 
+# Move isos
 mkdir -p /root/iprediaos/iso/
 mv *.iso /root/iprediaos/iso/
-echo "rename iso done"
 
 # Delete old isos
 find /root/iprediaos/iso/ -type f -mtime +3 -exec rm {} \;
