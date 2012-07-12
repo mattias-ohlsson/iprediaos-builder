@@ -1,6 +1,7 @@
 #! /bin/bash
 
-# Ger release version
+# Get release version
+RELEASE=$(date +%Y%m%d)
 while getopts ":r:" opt; do
   case $opt in
     r)
@@ -14,10 +15,6 @@ while getopts ":r:" opt; do
     :)
       echo "Option -$OPTARG requires an argument." >&2
       exit 1
-      ;;
-    *)
-      echo "Use date for release." >&2
-      RELEASE=$(date +%Y%m%d)
       ;;
   esac
 done
