@@ -69,48 +69,42 @@ echo "livecd-creator ..."
 
 make livecd-desktop-i686
 mv IprediaOS-*-i686-Live-Desktop.iso IprediaOS-$RELEASE-i686-Live-Desktop.iso
-echo -e "Hash: SHA256\n" > IprediaOS-$RELEASE-i686-Live-Desktop-CHECKSUM
-sha256sum IprediaOS-$RELEASE-i686-Live-Desktop.iso >> IprediaOS-$RELEASE-i686-Live-Desktop-CHECKSUM
+sha256sum IprediaOS-$RELEASE-i686-Live-Desktop.iso > IprediaOS-$RELEASE-i686-Live-Desktop-CHECKSUM
 echo "Move and sync iso"
 mv *.iso *CHECKSUM /root/iprediaos/iso/
 /root/iprediaos/sync-files.sh
 
 make livecd-lxde-i686
 mv IprediaOS-*-i686-Live-LXDE.iso IprediaOS-$RELEASE-i686-Live-LXDE.iso
-echo -e "Hash: SHA256\n" > IprediaOS-$RELEASE-i686-Live-LXDE-CHECKSUM
-sha256sum IprediaOS-$RELEASE-i686-Live-LXDE.iso >> IprediaOS-$RELEASE-i686-Live-LXDE-CHECKSUM
+sha256sum IprediaOS-$RELEASE-i686-Live-LXDE.iso > IprediaOS-$RELEASE-i686-Live-LXDE-CHECKSUM
 echo "Move and sync iso"
 mv *.iso *CHECKSUM /root/iprediaos/iso/
 /root/iprediaos/sync-files.sh
 
 make livecd-desktop-i686-sv_SE
 mv IprediaOS-*-i686-Live-Desktop-sv_SE.iso IprediaOS-$RELEASE-i686-Live-Desktop-sv_SE.iso
-echo -e "Hash: SHA256\n" > IprediaOS-$RELEASE-i686-Live-Desktop-sv_SE-CHECKSUM
-sha256sum IprediaOS-$RELEASE-i686-Live-Desktop-sv_SE.iso >> IprediaOS-$RELEASE-i686-Live-Desktop-sv_SE-CHECKSUM
+sha256sum IprediaOS-$RELEASE-i686-Live-Desktop-sv_SE.iso > IprediaOS-$RELEASE-i686-Live-Desktop-sv_SE-CHECKSUM
 echo "Move and sync iso"
 mv *.iso *CHECKSUM /root/iprediaos/iso/
 /root/iprediaos/sync-files.sh
 
 make livecd-lxde-i686-sv_SE
 mv IprediaOS-*-i686-Live-LXDE-sv_SE.iso IprediaOS-$RELEASE-i686-Live-LXDE-sv_SE.iso
-echo -e "Hash: SHA256\n" > IprediaOS-$RELEASE-i686-Live-LXDE-sv_SE-CHECKSUM
-sha256sum IprediaOS-$RELEASE-i686-Live-LXDE-sv_SE.iso >> IprediaOS-$RELEASE-i686-Live-LXDE-sv_SE-CHECKSUM
+sha256sum IprediaOS-$RELEASE-i686-Live-LXDE-sv_SE.iso > IprediaOS-$RELEASE-i686-Live-LXDE-sv_SE-CHECKSUM
 echo "Move and sync iso"
 mv *.iso *CHECKSUM /root/iprediaos/iso/
 /root/iprediaos/sync-files.sh
 
 make livecd-desktop-i686-ru_RU
 mv IprediaOS-*-i686-Live-Desktop-ru_RU.iso IprediaOS-$RELEASE-i686-Live-Desktop-ru_RU.iso
-echo -e "Hash: SHA256\n" > IprediaOS-$RELEASE-i686-Live-Desktop-ru_RU-CHECKSUM
-sha256sum IprediaOS-$RELEASE-i686-Live-Desktop-ru_RU.iso >> IprediaOS-$RELEASE-i686-Live-Desktop-ru_RU-CHECKSUM
+sha256sum IprediaOS-$RELEASE-i686-Live-Desktop-ru_RU.iso > IprediaOS-$RELEASE-i686-Live-Desktop-ru_RU-CHECKSUM
 echo "Move and sync iso"
 mv *.iso *CHECKSUM /root/iprediaos/iso/
 /root/iprediaos/sync-files.sh
 
 make livecd-lxde-i686-ru_RU
 mv IprediaOS-*-i686-Live-LXDE-ru_RU.iso IprediaOS-$RELEASE-i686-Live-LXDE-ru_RU.iso
-echo -e "Hash: SHA256\n" > IprediaOS-$RELEASE-i686-Live-LXDE-ru_RU-CHECKSUM
-sha256sum IprediaOS-$RELEASE-i686-Live-LXDE-ru_RU.iso >> IprediaOS-$RELEASE-i686-Live-LXDE-ru_RU-CHECKSUM
+sha256sum IprediaOS-$RELEASE-i686-Live-LXDE-ru_RU.iso > IprediaOS-$RELEASE-i686-Live-LXDE-ru_RU-CHECKSUM
 echo "Move and sync iso"
 mv *.iso *CHECKSUM /root/iprediaos/iso/
 /root/iprediaos/sync-files.sh
