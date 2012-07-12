@@ -1,5 +1,30 @@
 #! /bin/bash
 
+# Ger release version
+while getopts ":r:" opt; do
+  case $opt in
+    r)
+      echo "-r was triggered, Parameter: $OPTARG" >&2
+      RELEASE=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+    *)
+      echo "Use date for release." >&2
+      RELEASE=$(date +%Y%m%d)
+      ;;
+  esac
+done
+
+echo "--------- IprediaOS release: $RELEASE ----------------"
+
+
 # Update
 yum update -y
 
