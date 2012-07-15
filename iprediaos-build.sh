@@ -62,7 +62,7 @@ git pull
 mkdir -p /root/iprediaos/iso/
 
 # Delete old isos
-find /root/iprediaos/iso/ -type f -mtime +1 -exec rm {} \;
+find /root/iprediaos/iso/ -type f -mtime +0 -exec rm {} \;
 
 # make iso and rename
 echo "livecd-creator ..."
