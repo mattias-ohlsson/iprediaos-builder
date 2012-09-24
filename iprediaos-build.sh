@@ -123,6 +123,20 @@ echo "Move and sync iso"
 mv *.iso *CHECKSUM /root/iprediaos/iso/
 /root/iprediaos/sync-files.sh
 
+make livecd-desktop-i686-fr_FR
+mv IprediaOS-*-i686-Live-Desktop-fr_FR.iso IprediaOS-$RELEASE-i686-Live-Desktop-fr_FR.iso
+sha256sum IprediaOS-$RELEASE-i686-Live-Desktop-fr_FR.iso > IprediaOS-$RELEASE-i686-Live-Desktop-fr_FR-CHECKSUM
+echo "Move and sync iso"
+mv *.iso *CHECKSUM /root/iprediaos/iso/
+/root/iprediaos/sync-files.sh
+
+make livecd-lxde-i686-fr_FR
+mv IprediaOS-*-i686-Live-LXDE-fr_FR.iso IprediaOS-$RELEASE-i686-Live-LXDE-fr_FR.iso
+sha256sum IprediaOS-$RELEASE-i686-Live-LXDE-fr_FR.iso > IprediaOS-$RELEASE-i686-Live-LXDE-fr_FR-CHECKSUM
+echo "Move and sync iso"
+mv *.iso *CHECKSUM /root/iprediaos/iso/
+/root/iprediaos/sync-files.sh
+
 echo "livecd-creator done"
 
 # (disabled) Reboot to fix loopback device problems
