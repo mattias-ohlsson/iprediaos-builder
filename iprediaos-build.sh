@@ -67,6 +67,19 @@ find /root/iprediaos/iso/ -type f -mtime +0 -exec rm {} \;
 # make iso and rename
 echo "livecd-creator ..."
 
+# Vanilla Test
+setenforce 0
+setarch i686 livecd-creator -dv --config=/usr/share/spin-kickstarts/fedora-livecd-desktop.ks \
+ --fslabel=FedoraRef-i686-Live-Desktop \
+ --product="FedoraRef test" \
+ --title="FedoraRef test" \
+ --cache=/tmp/iprediaosbuild && chmod 666 *.iso
+mv FedoraRef-*-i686-Live-Desktop.iso FedoraRef-$RELEASE-i686-Live-Desktop.iso
+sha256sum FedoraRef-$RELEASE-i686-Live-Desktop.iso > FedoraRef-$RELEASE-i686-Live-Desktop-CHECKSUM
+echo "Move and sync iso"
+mv *.iso *CHECKSUM /root/iprediaos/iso/
+/root/iprediaos/sync-files.sh
+
 make livecd-desktop-i686
 mv IprediaOS-*-i686-Live-Desktop.iso IprediaOS-$RELEASE-i686-Live-Desktop.iso
 sha256sum IprediaOS-$RELEASE-i686-Live-Desktop.iso > IprediaOS-$RELEASE-i686-Live-Desktop-CHECKSUM
